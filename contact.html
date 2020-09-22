@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contatti</title>
-</head>
-<body>
-
-
-        <form action="action_page.php">
-      
-          <label for="fname">Nome</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Cognome</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="country">Nazione</label>
-          <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-      
-          <label for="subject">Messaggio</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-
-</body>
+  </head>
+  <body>
+    <h3>Invia una mail a proprietariobb@example.com:</h3>
+    <form
+      action="MAILTO:qualcuno@example.com"
+      method="post"
+      enctype="text/plain"
+    >
+      Name:<br /><input
+        type="text"
+        name="Nome"
+        value="il tuo nome"
+      /><br />
+      E-mail:<br /><input type="text" name="mail" value="la tua mail" /><br />
+      Comment:<br /><input
+        type="text"
+        name="commenti"
+        value="commenti"
+        size="50"
+      /><br />
+      <input type="submit" value="Invia!" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
 </html>
