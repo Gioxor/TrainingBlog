@@ -4,58 +4,45 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
     <title>Esercitazione1</title>
-    <style>
-        body {
-            background-image: url(media/bg.jpg);
-        }
-
-        .center { 
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 10%;
-          }
-    </style>
 </head>
 
 <body>
     <h1>Benvenuti nel mio Blog</h1>
+<div class="navbar">
     <nav>
-        <a href="contact.html">Contatti</a> |
-        <a href="findme.html">Dove ti trovi</a> |
-        <a href="video.html">Video</a> |
-        <a href="musica.html">Musica</a> |
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li> 
+        <li><a href="contact.html">Contatti</a></li> 
+        <li><a href="findme.html">Dove ti trovi</a></li> 
+        <li><a href="video.html">Video</a></li> 
+        <li><a href="musica.html">Musica</a></li> 
+    </ul>
     </nav>
-
-    <section style="text-align: center;">
+</div>
+    <section >
         <header>
             <h2>Articoli</h2>
         </header>
-        <article>
+
             <h3>Lorem</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...<a href="articoli/Lorem.html">Clicca qui per
                     l'articolo
                     completo!</a></p>
-        </article>
-        <article>
             <header>
                 <h3>Mozilla Firefox</h3>
             </header>
             <p>Mozilla Firefox is an open-source...<a href="articoli/mozilla.html">Clicca qui per l'articolo
                     completo!</a></p>
-        </article>
 
-        <article>
             <header>
                 <h3>Microsoft Edge</h3>
             </header>
             <p>Microsoft Edge is ...<a href="articoli/edge.html">Clicca qui per l'articolo completo!</a></p>
-        </article>
+
     </section>
-    <div>
-        <img src="media/Bamboozled.jpg" alt="dog" class="center">
-    </div>
 
     <footer style="text-align: center;"> Made with love da Giorgio </br> P.IVA - 8974237623498 </footer>
 </body>

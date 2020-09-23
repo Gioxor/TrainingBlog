@@ -4,21 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-        background-image: url(media/bg.jpg);
-    }
-</style>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
   <title>Musica</title>
 </head>
 <body>
-  
+
+  <div class="navbar">
+    <nav>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="../contact.html">Contatti</a></li>
+        <li><a href="../findme.html">Dove ti trovi</a></li>
+        <li><a href="../video.html">Video</a></li>
+        <li><a href="../musica.html">Musica</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="wrapper">
   <audio controls>
-    <source src="media/music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
   </audio>
 
   </br>
-
+  
   <canvas id="myCanvas" width="200" height="100"></canvas>
   <script>
     var c = document.getElementById("myCanvas");
@@ -26,6 +36,7 @@
     ctx.font = "30px Arial";
     ctx.fillText("Prova Canvas", 10, 50);
   </script>
+</div>
 
 </body>
 

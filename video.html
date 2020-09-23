@@ -3,28 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        background-image: url(media/bg.jpg);
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Adamina"
+      rel="stylesheet"
+    />
     <title>Video</title>
   </head>
 
   <body>
-    <h2>Prova video Youtube</h2>
-    <iframe
-      width="420"
-      height="315"
-      src="https://www.youtube.com/embed/tgbNymZ7vqY"
-    >
-    </iframe>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a class="active" href="../index.html">Home</a></li>
+          <li><a href="../contact.html">Contatti</a></li>
+          <li><a href="../findme.html">Dove ti trovi</a></li>
+          <li><a href="../video.html">Video</a></li>
+          <li><a href="../musica.html">Musica</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <h2>Prova video Youtube</h2>
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+      >
+      </iframe>
 
-    <div>
-      <h2>Prova video in locale</h2>
-      <video width="320" height="240" controls>
-        <source src="media/video.mp4" type="video/mp4" />
-      </video>
+      <div>
+        <h2>Prova video in locale</h2>
+        <video width="320" height="240" controls>
+          <source src="media/video.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   </body>
 </html>
