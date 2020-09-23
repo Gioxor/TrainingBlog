@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url(media/bg.jpg);
+      }
+    </style>
+    <script
+      src="https://js.api.here.com/v3/3.0/mapsjs-core.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://js.api.here.com/v3/3.0/mapsjs-service.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <title>Dove ti trovi?</title>
+  </head>
+
+  <body>
+    <div style="border-style: double">
+      <p id="demo">Dove ti trovi?</p>
+      <button onclick="getLocation()">Prova!</button>
+    </div>
+    <script>
+      var x = document.getElementById("demo");
+      var latitudine;
+      var longitudine;
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          //funzione supportata o autorizzata,
+          //richiamo la funzione di callback showPosition
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocalizzazione non supportata";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitudine: " +
+          position.coords.latitude +
+          " Longitudine: " +
+          position.coords.longitude;
+        latitudine = position.coords.latitude;
+        longitudine = position.coords.longitude;
+      }
+    </script>
+
+    <script>
+      var platform = new H.service.Platform({
+        app_id: "APP-ID-HERE",
+        app_code: "APP-CODE-HERE",
+      });
+      var geocoder = platform.getGeocodingService();
+    </script>
+  </body>
+</html>

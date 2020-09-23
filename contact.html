@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url(media/bg.jpg);
+      }
+    </style>
+    <title>Contatti</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <title>Contatti</title>
-</head>
-
-<body>
-  <h3>Invia una mail a proprietariobb@example.com:</h3>
-  <div>
-    <form action="MAILTO:qualcuno@example.com" method="post" enctype="text/plain">
-      Name:<br /><input type="text" name="Nome" value="il tuo nome" /><br />
-      E-mail:<br /><input type="text" name="mail" value="la tua mail" /><br />
-      Comment:<br /><input type="text" name="commenti" value="commenti" size="50" /><br />
-      <input type="submit" value="Invia!" />
-      <input type="reset" value="Reset" />
-    </form>
-  </div>
-</body>
-
+  <body>
+    <h3>Invia una mail a proprietariobb@example.com:</h3>
+    <div id="formcontatti">
+      <form
+        action="MAILTO:qualcuno@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        Name:<br /><input type="text" name="Nome" value="il tuo nome" /><br />
+        E-mail:<br /><input type="text" name="mail" value="la tua mail" /><br />
+        Comment:<br /><input
+          type="text"
+          name="commenti"
+          value="commenti"
+          size="50"
+        /><br />
+        <input type="submit" value="Invia!" />
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+  </body>
 </html>
