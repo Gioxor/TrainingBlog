@@ -10,6 +10,9 @@ body {
     border-right: 2px solid rgba(0, 0, 0, .1);
 }
 
+#comment {
+    margin-bottom: 20px;
+}
 
 .carousel-inner img {
     display: block;
