@@ -11,26 +11,82 @@
   <title>Contatti</title>
 </head>
 
-<body>
-  <h3>Invia una mail a proprietariobb@example.com:</h3>
-  <div id="formcontatti">
-    <form action="MAILTO:qualcuno@example.com" method="post" enctype="text/plain">
-      Name:<br /><input type="text" name="Nome" value="il tuo nome" /><br />
-      E-mail:<br /><input type="text" name="mail" value="la tua mail" /><br />
-      Comment:<br /><input type="text" name="commenti" value="commenti" size="50" /><br />
-      <input type="submit" value="Invia!" />
-      <input type="reset" value="Reset" />
-    </form>
+<header>
+  <nav class="navbar navbar-light bg-info">
+    <a class="navbar-brand" href="#">
+      <img src="media/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+      <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
+    </a>
+  </nav>
+</header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-auto">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav flex-column">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Scrivimi cose</a></br>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="musica.html">Musica&Video</a></br>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="findme.html">Dove ti trovi</a></br>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="col-9">
+      <h3> Inserire elementi nella lista: </h3>
+      <input class="form-control" id="inputList" type="text" placeholder="Default input">
+      <button type="button" id="list" class="btn btn-primary my-2">Inserisci</button>
+      <h4>Lista: </h4>
+      <div class="form-check  my-2" id="unchecked">
+        <!-- unchecked zone -->
+      </div>
+      <div class="form-check" id="checked">
+        <!-- checked zone -->
+      </div>
+
+    </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://giorgioloi.com/"> giorgioloi.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+</script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

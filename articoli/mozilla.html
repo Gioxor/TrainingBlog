@@ -17,7 +17,7 @@
     <nav class="navbar navbar-light bg-info">
       <a class="navbar-brand" href="#">
         <img src="../media/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="" />
-        <h1>Un Blog Pazzesco</h1>
+        <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
       </a>
     </nav>
   </header>
@@ -69,11 +69,14 @@
           - non era molto - da una rivista illustrata e messo dentro una bella
           cornice dorata: raffigurava una donna seduta, ma ben dritta sul busto,
           con un berretto e un boa di pelliccia; essa levava incontro a chi
-          guardava un pesante manicotto, in cui scompariva tutto l’avambraccio
+          guardava un pesante manicotto, in cui scompariva tutto l’avambraccio.
+          <img src="../media/like.svg" alt="" id="like" class="img-thumbnail" width="45px" height="45px">
+          <img src="../media/liked.svg" alt="" id="liked" class="img-thumbnail" width="45px" height="45px">
+          <button type="button" id="btnlike" class="btn btn-primary">Mi Piace</button>
         </p>
 
         <div class="form-group">
-          <h2>Scrivi il tuo commento</h2>
+          <h3>Scrivi il tuo commento</h3>
           <label for="formGroupExampleInput">Nickname</label>
           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nickname">
         </div>
@@ -84,6 +87,8 @@
         <button id="comment" class="btn btn-primary">Commenta</button>
 
         <h4>Commenti: </h4>
+        <ul class="list-group list-group-flush comments-container">
+        </ul>
 
       </div>
     </div>

@@ -16,7 +16,7 @@
     <nav class="navbar navbar-light bg-info">
       <a class="navbar-brand" href="#">
         <img src="../media/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-        <h1>Un Blog Pazzesco</h1>
+        <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
       </a>
     </nav>
   </header>
@@ -35,7 +35,7 @@
                 <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a></br>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contatti</a></br>
+                <a class="nav-link" href="../contact.html">Contatti</a></br>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../musica.html">Musica&Video</a></br>
@@ -70,14 +70,18 @@
           iniziale nella cintura, e si mise in cammino. Quando superò i primi
           colli dei monti Corsivi, si voltò a guardare un’ultima volta la skyline
           di Lettere, la sua città, la headline del villaggio Alfabeto e la
-          subline della sua stessa strada, il vicolo Riga. Una domanda retorica</p>
+          subline della sua stessa strada, il vicolo Riga. </br>
+          <img src="../media/like.svg" alt="" id="like" class="img-thumbnail" width="45px" height="45px">
+          <img src="../media/liked.svg" alt="" id="liked" class="img-thumbnail" width="45px" height="45px">
+          <button type="button" id="btnlike" class="btn btn-primary">Mi Piace</button>
+        </p>
 
 
 
 
 
         <div class="form-group">
-          <h2>Scrivi il tuo commento</h2>
+          <h3>Scrivi il tuo commento</h3>
           <label for="formGroupExampleInput">Nickname</label>
           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nickname">
         </div>
@@ -88,6 +92,9 @@
         <button id="comment" class="btn btn-primary">Commenta</button>
 
         <h4>Commenti: </h4>
+
+        <ul class="list-group list-group-flush comments-container">
+        </ul>
       </div>
     </div>
   </div>
