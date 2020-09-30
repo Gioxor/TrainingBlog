@@ -14,44 +14,46 @@
 <header>
   <nav class="navbar navbar-light bg-info">
     <a class="navbar-brand" href="#">
-      <img src="media/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-      <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
+      <img src="media/favicon.ico" width="50" height="50" class="float-left" alt="">
+
     </a>
+    <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
   </nav>
 </header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav bar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Scrivimi cose</a></br>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="musica.html">Musica&Video</a></br>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="findme.html">Dove ti trovi</a></br>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
 <div class="container">
   <div class="row">
     <div class="col-md-auto">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="nav flex-column">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Scrivimi cose</a></br>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="musica.html">Musica&Video</a></br>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="findme.html">Dove ti trovi</a></br>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </div>
-
     <div class="col-9">
       <h3> Inserire elementi nella lista: </h3>
       <input class="form-control" id="inputList" type="text" placeholder="Default input">
-      <button type="button" id="list" class="btn btn-primary my-2">Inserisci</button>
+      <button type="button" id="list" class="btn btn-primary my-4">Inserisci</button>
       <h4>Lista: </h4>
       <div class="form-check  my-2" id="unchecked">
         <!-- unchecked zone -->
@@ -66,7 +68,7 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark pt-4">
+<footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:

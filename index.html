@@ -8,108 +8,157 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js"></script>
-
-    <title>Esercitazione1</title>
+    <title>Giorgio's Blog</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-info">
+        <nav class="navbar navbar-light bg-info ">
             <a class="navbar-brand" href="#">
-                <img src="media/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-                <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
+                <img src="media/favicon.ico" width="50" height="50" class="float-left" alt="">
+
             </a>
+            <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
         </nav>
     </header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav bar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">To Do List</a></br>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="musica.html">Musica&Video</a></br>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="findme.html">Dove ti trovi</a></br>
+                </li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal"
+            id="insertArticleButton">
+            Aggiungi un articolo
+        </button>
+    </nav>
 
 
     <div class="container">
         <div class="row">
             <div class="col-md-auto">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav flex-column">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span
-                                        class="sr-only">(current)</span></a></br>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Scrivimi cose</a></br>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="musica.html">Musica&Video</a></br>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="findme.html">Dove ti trovi</a></br>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+
             </div>
 
             <div class="col-9">
-                <h2>I miei pensieri</h2>
-                <p class="article">
-                    La mia anima è pervasa da una mirabile serenità, simile a queste belle mattinate di
-                    maggio che io
-                    godo con tutto il cuore. Sono solo e mi rallegro di vivere in questo luogo che sembra esser creato
-                    per anime simili alla mia. Sono così felice, mio caro, così immerso nel sentimento della mia
-                    tranquilla esistenza che la mia arte ne soffre. Non potrei disegnare nulla ora, neppure un segno
-                    potrei tracciare; eppure mai sono stato così gran pittore come in questo momento. Quando l'amata
-                    valle intorno a me si avvolge nei suoi vapori, e l'alto sole posa sulla mia foresta
-                    impenetrabilmente oscura, e solo alcuni raggi si spingono nell'interno sacrario, io mi stendo
-                    nell'erba alta presso il ruscello che scorre, e più vicino alla terra osservo mille multiformi
-                    erbette; allora sento più vicino al mio cuore brulicare tra gli steli il piccolo mondo degli
-                    innumerevoli, infiniti vermiciattoli e moscerini, e sento la presenza dell'Onnipossente che ci ha
-                    creati a sua immagine e ci tiene in una eterna gioia. Amico mio, quando dinanzi ai miei occhi si
-                    stende il crepuscolo e posa intorno a me il mondo e il cielo tutto nell'anima mia come la sembianza
-                    di donna amata, allora spesso sono preso da un angoscioso desiderio e penso: Ah, potessi tu
-                    esprimere tutto questo, trasfonderlo sulla carta così pieno e caldo come vive in te, e fosse questo
-                    lo specchio della tua anima, come la tua anima è lo specchio del Dio infinito. Ma mi sprofondo in un
-                    abisso e m'inchino alla potenza dello splendore di questa visione.La mia anima è pervasa da una
-                    mirabile serenità, simile a queste belle mattinate di maggio che io godo con tutto il cuore.</p>
+                <section>
+                    <h2>I miei pensieri</h2>
+                    <p class="article">
+                        La mia anima è pervasa da una mirabile serenità, simile a queste belle mattinate di
+                        maggio che io
+                        godo con tutto il cuore. Sono solo e mi rallegro di vivere in questo luogo che sembra esser
+                        creato
+                        per anime simili alla mia. Sono così felice, mio caro, così immerso nel sentimento della mia
+                        tranquilla esistenza che la mia arte ne soffre. Non potrei disegnare nulla ora, neppure un segno
+                        potrei tracciare; eppure mai sono stato così gran pittore come in questo momento. Quando l'amata
+                        valle intorno a me si avvolge nei suoi vapori, e l'alto sole posa sulla mia foresta
+                        impenetrabilmente oscura, e solo alcuni raggi si spingono nell'interno sacrario, io mi stendo
+                        nell'erba alta presso il ruscello che scorre, e più vicino alla terra osservo mille multiformi
+                        erbette; allora sento più vicino al mio cuore brulicare tra gli steli il piccolo mondo degli
+                        innumerevoli, infiniti vermiciattoli e moscerini, e sento la presenza dell'Onnipossente che ci
+                        ha
+                        creati a sua immagine e ci tiene in una eterna gioia. Amico mio, quando dinanzi ai miei occhi si
+                        stende il crepuscolo e posa intorno a me il mondo e il cielo tutto nell'anima mia come la
+                        sembianza
+                        di donna amata, allora spesso sono preso da un angoscioso desiderio e penso: Ah, potessi tu
+                        esprimere tutto questo, trasfonderlo sulla carta così pieno e caldo come vive in te, e fosse
+                        questo
+                        lo specchio della tua anima, come la tua anima è lo specchio del Dio infinito. Ma mi sprofondo
+                        in un
+                        abisso e m'inchino alla potenza dello splendore di questa visione.La mia anima è pervasa da una
+                        mirabile serenità, simile a queste belle mattinate di maggio che io godo con tutto il cuore.</p>
 
-                <h2>Articoli interessanti</h2>
-
-
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a href="articoli/Lorem.html">Continua</a>
-                </p>
-
-                <h3>Mozilla Firefox</h3>
-
-                <p>Mozilla Firefox is an open-source...<a href="articoli/mozilla.html">Continua</a></p>
+                    <h2>Articoli interessanti</h2>
 
 
-                <h3>Microsoft Edge</h3>
+                </section>
 
-                <p>Microsoft Edge is ...<a href="articoli/edge.html">Continua</a></p>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Nuovo Articolo</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!--New article title-->
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Titolo</span>
+                                    </div>
+                                    <input type="text" id="articleTitleInput" class="form-control" placeholder="Titolo"
+                                        aria-label="title" aria-describedby="basic-addon1">
+                                </div>
+                                <!--Article Body-->
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Corpo Articolo</span>
+                                    </div>
+                                    <textarea id="textArea" class="form-control" placeholder="Scrivi..."
+                                        aria-label="With textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+                                <button type="button" id="insertButton" class="btn btn-primary">Inserisci</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Scrivi il tuo commento</h3>
+                    <label for="formGroupExampleInput">Nickname</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nickname">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Commento</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Scrivi..."
+                        size="100">
+                </div>
+                <button id="comment" class="btn btn-primary">Commenta</button>
+
+                <h4>Commenti: </h4>
+
+                <ul class="list-group list-group-flush comments-container">
+                </ul>
 
             </div>
         </div>
     </div>
 
 
-
-
     <!-- Footer -->
-    <footer class="page-footer font-small unique-color-dark pt-4">
-
+    <footer>
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <div class="card-footer">© 2020 Copyright:
             <a href="https://giorgioloi.com/"> giorgioloi.com</a>
         </div>
         <!-- Copyright -->
-
     </footer>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -122,6 +171,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+    <script src="js/Article.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
 </body>
 
 </html>
