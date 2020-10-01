@@ -30,10 +30,10 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav bar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
+        <a class="nav-link" href="index.html">Home </a></br>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Scrivimi cose</a></br>
+        <a class="nav-link" href="todolist.html">To do list</a><span class="sr-only">(current)</span></br>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="musica.html">Musica&Video</a></br>
@@ -50,32 +50,25 @@
   <div class="row">
     <div class="col-md-auto">
     </div>
-    <div class="col-9">
+    <div class="col-9 my-3">
       <h3> Inserire elementi nella lista: </h3>
-      <input class="form-control" id="inputList" type="text" placeholder="Default input">
-      <button type="button" id="list" class="btn btn-primary my-4">Inserisci</button>
+      <input class="form-control my-4" id="inputList" type="text" placeholder="Default input">
+      <button type="button" id="list" class="btn btn-primary my-2">Inserisci</button>
       <h4>Lista: </h4>
-      <div class="form-check  my-2" id="unchecked">
+      <div class="form-check  my-2" id="listContainer">
         <!-- unchecked zone -->
       </div>
-      <div class="form-check" id="checked">
-        <!-- checked zone -->
-      </div>
-
     </div>
   </div>
 </div>
 
-
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
-
+<footer>
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <div class="card-footer">© 2020 Copyright:
     <a href="https://giorgioloi.com/"> giorgioloi.com</a>
   </div>
   <!-- Copyright -->
-
 </footer>
 
 </div>
@@ -88,7 +81,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
   integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
 </script>
-<script src="js/main.js"></script>
+<script type="text/javascript" src="app/models/Article.js"></script>
+<script type="text/javascript" src="app/controllers/index.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

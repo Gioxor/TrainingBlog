@@ -34,7 +34,7 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">To Do List</a></br>
+                    <a class="nav-link" href="todolist.html">To Do List</a></br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="musica.html">Musica&Video</a></br>
@@ -120,6 +120,18 @@
                                     <textarea id="textArea" class="form-control" placeholder="Scrivi..."
                                         aria-label="With textarea"></textarea>
                                 </div>
+
+
+                                <div class="form-check">
+                                    <input type="checkbox" class="custom-control-input" id="pubblicSwitch1">
+                                    <label class="custom-control-label" for="pubblicSwitch1">Pubblic</label>
+                                    <br>
+
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="custom-control-input" id="switch2">
+                                    <label class="custom-control-label" for="switch2">High Priority</label>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
@@ -128,23 +140,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="commentSection" style="display: none;">
+                    <div class="form-group">
+                        <h3>Commenta l'articolo: </h3>
+                        <label for="formGroupExampleInput">Nickname</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nickname">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Commento</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Scrivi..."
+                            size="100">
+                    </div>
+                    <button id="comment" class="btn btn-primary">Commenta</button>
 
-                <div class="form-group">
-                    <h3>Scrivi il tuo commento</h3>
-                    <label for="formGroupExampleInput">Nickname</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nickname">
+                    <h4>Commenti: </h4>
+                    <ul class="list-group list-group-flush comments-container">
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Commento</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Scrivi..."
-                        size="100">
-                </div>
-                <button id="comment" class="btn btn-primary">Commenta</button>
-
-                <h4>Commenti: </h4>
-
-                <ul class="list-group list-group-flush comments-container">
-                </ul>
 
             </div>
         </div>
@@ -171,7 +183,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-    <script src="js/Article.js"></script>
+    <script type="text/javascript" src="app/models/Article.js"></script>
+    <script type="text/javascript" src="app/controllers/index.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 </body>

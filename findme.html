@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>Dove ti trovi?</title>
+  <title>Random</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">To Do List</a></br>
+          <a class="nav-link" href="todolist.html">To Do List</a></br>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="musica.html">Musica&Video</a></br>
@@ -53,9 +53,6 @@
       </div>
 
       <div class="col-9">
-        <p id="demo">Dove ti trovi?</p>
-        <button onclick="getLocation()">Prova!</button>
-
 
         <h2>Lo sapevi?</h2>
         <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport
@@ -110,38 +107,14 @@
   </div>
 
   <!-- Footer -->
-  <footer class="page-footer font-small unique-color-dark pt-4">
-
+  <footer>
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <div class="card-footer">© 2020 Copyright:
       <a href="https://giorgioloi.com/"> giorgioloi.com</a>
     </div>
     <!-- Copyright -->
-
   </footer>
 
-
-  <script>
-    var x = document.getElementById("demo");
-
-    function getLocation() {
-      if (navigator.geolocation) {
-        //funzione supportata o autorizzata,
-        //richiamo la funzione di callback showPosition
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        x.innerHTML = "Geolocalizzazione non supportata";
-      }
-    }
-
-    function showPosition(position) {
-      x.innerHTML =
-        "Latitudine: " +
-        position.coords.latitude +
-        " Longitudine: " +
-        position.coords.longitude;
-    }
-  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
