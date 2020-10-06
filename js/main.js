@@ -23,9 +23,38 @@ $(document).ready(function () {
     //Article insert
     $("#insertButton").click(addPost);
 
-    for (var i = 0; i < articles.length; i++) {
-        showArticle(articles[i]);
-    };
+    // for (var i = 0; i < articles.length; i++) {
+    //     showArticle(articles[i]);
+    // };
 
+    $.get({
+        type: "GET",
+        url: "https://api.npoint.io/24620ef625c768a4f3c4",
+        dataType: 'json',
+        async: true,
+        success: (data, response) => {
+            let risposta = response[0];
+            let jsonPost = [];
+            if (risposta) {
+                for (var i in data) {
+                    if (data[i].public) {
+                        if (data[i].featured) {
+                            showArticle(data[i]);
+                        } else {
+                            jsonPost.push(data[i]);
+                        }
+                    } else {
+                        console.log("Non mostrare");
+                    }
+                }
+                for (let j in jsonPost) {
+                    showArticle(jsonPost[j]);
+                }
+            } else {
+                console.log("ERROR");
+            }
+        }
+
+    })
 
 });
