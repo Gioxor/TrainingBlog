@@ -1,21 +1,23 @@
 header {
-    border: 2px solid rgba(0, 0, 0, .1);
+    background-color: #273238;
 }
 
-.col-9 {
-    text-align: left;
+body {
+    background-color: #d8e3ea;
 }
 
-.col-md-auto {
-    border-right: 2px solid rgba(0, 0, 0, .1);
-}
 
 .navbar {
-    border-bottom: 2px solid rgba(0, 0, 0, .1);
+    background-color: #273238;
 }
 
 #comment {
     margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #007cba;
+    color: lightyellow;
 }
 
 .carousel-inner img {
@@ -35,7 +37,7 @@ header {
 }
 
 footer {
-    background-color: lightskyblue;
+    color: lightyellow;
+    background-color: #273238;
     text-align: center;
-    ;
 }

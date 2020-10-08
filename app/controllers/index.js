@@ -1,52 +1,138 @@
-var article1 = new Article("Lorem", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fermentum iaculis eu non diam phasellus. Varius morbi enim nunc faucibus a pellentesque sit. Volutpat maecenas volutpat blandit aliquam etiam erat velit. Dui faucibus in ornare quam. Accumsan lacus vel facilisis volutpat est velit egestas dui. Blandit cursus risus at ultrices mi. Pellentesque elit ullamcorper dignissim cras tincidunt. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Id semper risus in hendrerit. Urna duis convallis convallis tellus. Non blandit massa enim nec dui", true, true, ["attualità"]);
-var article2 = new Article("Mozilla Firefox", "Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018. Gregorio Samsa, svegliandosi una mattina da sogni agitati, si trovò trasformato, nel suo letto, in un enorme insetto immondo. Riposava sulla schiena, dura come una corazza, e sollevando un poco il capo vedeva il suo ventre arcuato, bruno e diviso in tanti segmenti ricurvi, in cima a cui la coperta da letto, vicina a scivolar giù tutta, si manteneva a fatica. Le gambe, numerose e sottili da far pietà, rispetto alla sua corporatura normale, tremolavano senza tregua in un confuso luccichio dinanzi ai suoi occhi. Cosa m’è avvenuto? pensò. Non era un sogno. La sua camera, una stanzetta di giuste proporzioni, soltanto un po’ piccola, se ne stava tranquilla fra le quattro ben note pareti. Sulla tavola, un campionario disfatto di tessuti - Samsa era commesso viaggiatore e sopra, appeso alla parete, un ritratto, ritagliato da lui - non era molto - da una rivista illustrata e messo dentro una bella cornice dorata: raffigurava una donna seduta, ma ben dritta sul busto, con un berretto e un boa di pelliccia; essa levava incontro a chi guardava un pesante manicotto, in cui scompariva tutto l’avambraccio.", true, true, ["attualità"]);
-var article3 = new Article("Microsoft Edge", "Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer. In una terra lontana, dietro le montagne Parole, lontani dalle terre di Vocalia e Consonantia, vivono i testi casuali. Vivono isolati nella cittadina di Lettere, sulle coste del Semantico, un immenso oceano linguistico. Un piccolo ruscello chiamato Devoto Oli attraversa quei luoghi, rifornendoli di tutte le regolalie di cui hanno bisogno. È una terra paradismatica, un paese della cuccagna in cui golose porzioni di proposizioni arrostite volano in bocca a chi le desideri. Non una volta i testi casuali sono stati dominati dall’onnipotente Interpunzione, una vita davvero non ortografica. Un giorno però accadde che la piccola riga di un testo casuale, di nome Lorem ipsum, decise di andare a esplorare la vasta Grammatica. Il grande Oximox tentò di dissuaderla, poiché quel luogo pullulava di virgole spietate, punti interrogativi selvaggi e subdoli punti e virgola, ma il piccolo testo casuale non si fece certo fuorviare. Raccolse le sue sette maiuscole, fece scorrere la sua iniziale nella cintura, e si mise in cammino. Quando superò i primi colli dei monti Corsivi, si voltò a guardare un’ultima volta la skyline di Lettere, la sua città, la headline del villaggio Alfabeto e la subline della sua stessa strada, il vicolo Riga.", true, true, ["attualità"]);
-var articles = [article1, article2, article3];
+class ArticleController {
 
-var sectionContainer = $("section");
-var commentSection;
+    constructor() {
+        this.articles = [];
+        this.restController = new RestController();
+        //UI
+        this.commentContainer;
+        this.postsContainer;
+        this.postContainer;
+        this.modal;
+        this.openModalBtn;
+        this.modalTitle;
+        this.modalText;
+        this.modalPublicCheck;
+        this.modalFeaturedCheck;
+        this.insertButton
+        this.likeBotton;
+        this.tag;
 
-function addPost() {
-    //aggiungere un articolo
-    closeModal();
-    var titleText = $("#articleTitleInput").val();
-    var bodyText = $("#textArea").val();
-    var pub = $("#pubblicSwitch1").is(':checked');
-    var featured = $("#switch2").is(':checked');
-    //console.log(pub, featured);
-    var Ar = new Article(titleText, bodyText, pub, featured, tag);
-    articles.push(Ar);
-    if (pub) showArticle(Ar);
-};
-
-function showArticle(postArticle) {
-    let uiTitle = `<h4>${postArticle.title}</h4>`;
-    let uiBody = `<p class="article">${postArticle.body}<br>#${postArticle.tag}</p>`;
-    //commentSection = $(".commentSection").html();
-    sectionContainer.append(uiTitle, uiBody);
-}
-
-function showJsonArticle(title, body) {
-
-    let titolo = `<h4>${title}</h4>`
-    let corpo = `<p class="article">${body}</p>`
-    commentSection = $(".commentSection").html();
-    sectionContainer.append(titolo, corpo);
-}
-
-function closeModal() {
-    $("#myModal").modal("hide");
-};
-
-function addItem() {
-    let listElement = $("#inputList").val();
-    //console.log(listElement);
-    let listContainer = $("#listContainer");
-    if (listElement.val != " ") {
-        let cb = `<input type="checkbox" class="list" ><label>${listElement}</label></br>`;
-        listContainer.append(cb);
-        listElement.value = "";
-    } else {
-        alert("plz add a value to item");
     }
-};
+
+    init() {
+        $(document).ready(function () {
+            this.commentContainer = $(".comments-container");
+            this.postContainer = $("#postContainer");
+            this.modalTitle = $("#articleTitleInput");
+            this.modalText = $("#textArea");
+            this.modalPublicCheck = $("#pubblicSwitch1");
+            this.modalFeaturedCheck = $("#switch2");
+            this.likeButton = $("#btnlike");
+            this.insertButton = $("#insertButton");
+            this.tag = ["tag1", "tag2"];
+
+
+            //$("#liked").hide();
+            // $("#comment").click(function () {
+
+            //     var nickText = $("#formGroupExampleInput").val();
+            //     var commentText = $("#formGroupExampleInput2").val();
+
+            //     var comment = '<li class="list-group-item">' + '<a href="#" class="badge badge-secondary">' + nickText + '</a>' + '</br>' + commentText + '</li>';
+            //     commentContainer.append(comment);
+            //     $("input").val("");
+            // });
+
+            //Article insert
+            $("#insertButton").click(function () {
+
+                let Ar = new Article(this.modalTitle.val(),
+                    this.modalText.val(),
+                    this.modalPublicCheck.is(':checked'),
+                    this.modalFeaturedCheck.is(':checked'),
+                    this.tag
+                );
+                //this.addUIPost(Ar);
+                this.postArticles(Ar);
+                this.closeModal();
+            }.bind(this));
+
+            for (let i in articles) {
+                this.addUIPost(articles[i]);
+            }
+            this.getArticles();
+            //this.deleteArticle();
+
+
+        }.bind(this));
+
+    }
+
+
+    addUIPost(postArticle) {
+        //aggiungere un articolo\
+        var postContainer = $("#postContainer").clone();
+        postContainer.css("display", "block");
+        postContainer.attr("id", "");
+        postContainer.addClass("class", "postContainer");
+
+        var postHeader = postContainer.find(".card-header");
+        var postBody = postContainer.find(".card-text");
+
+        postHeader.html(postArticle.title);
+        postBody.html(postArticle.body + "<br>Tag: " + postArticle.tag);
+        $("#postsRow").append(postContainer);
+
+    }
+
+    showArticle(postArticle) {
+        let uiTitle = `<h4>${postArticle.title}</h4>`;
+        let uiBody = `<p class="article">${postArticle.body}<br>#${postArticle.tag}</p>`;
+        //commentSection = $(".commentSection").html();
+        sectionContainer.append(uiTitle, uiBody);
+    }
+
+    closeModal() {
+        $("#myModal").modal("hide");
+    }
+
+
+    getArticles() {
+        this.restController.get("https://texty-89895.firebaseio.com/posts.json", function (data, status, xhr) {
+            let jsonPost = [];
+            for (var i in data) {
+                var post = data[i];
+                if (post.public) {
+                    if (post.featured) {
+                        this.addUIPost(post);
+                    } else {
+                        jsonPost.push(post);
+                    }
+                }
+            }
+            for (let j in jsonPost) {
+                this.addUIPost(jsonPost[j]);
+            }
+        }.bind(this))
+    }
+
+
+    postArticles(data) {
+        // post(url, data, onSuccess, onError) {
+        this.restController.post("https://texty-89895.firebaseio.com/posts.json", data, function () {
+
+        }.bind(this))
+    }
+
+    deleteArticle() {
+        this.restController.delete(`https://texty-89895.firebaseio.com/posts/` + `-MJ7lGD4Sr2e1IIYzQ7n` + `.json`, function () {
+
+        }.bind(this))
+    }
+
+    putArticles(data) {
+        this.restController.put("https://texty-89895.firebaseio.com/posts.json", data, function () {
+
+        }.bind(this))
+    }
+}

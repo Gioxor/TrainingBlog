@@ -13,31 +13,24 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-info ">
-            <a class="navbar-brand" href="#">
-                <img src="media/favicon.ico" width="50" height="50" class="float-left" alt="">
-
-            </a>
+        <nav class="navbar">
             <h1 class="display-4 text-white">Un Blog Pazzesco</h1>
         </nav>
     </header>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top px-4">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav bar-nav">
+            <ul class="nav justify-content-center bar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></br>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="todolist.html">To Do List</a></br>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="musica.html">Musica&Video</a></br>
+                    <a class="nav-link" href="musica.html">Multimedia</a></br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="findme.html">Dove ti trovi</a></br>
@@ -52,45 +45,23 @@
 
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-auto">
+        <div class="row" id="postsRow">
+            <div class="col-12">
+                <h2>Articoli interessanti</h2>
+                <section id="postContainer" class="col-12 col-sm-6 px-2 my-1" style="display: none;">
 
-            </div>
+                    <div class="card">
+                        <div class="card-header">
 
-            <div class="col-9">
-                <section>
-                    <h2>I miei pensieri</h2>
-                    <p class="article">
-                        La mia anima è pervasa da una mirabile serenità, simile a queste belle mattinate di
-                        maggio che io
-                        godo con tutto il cuore. Sono solo e mi rallegro di vivere in questo luogo che sembra esser
-                        creato
-                        per anime simili alla mia. Sono così felice, mio caro, così immerso nel sentimento della mia
-                        tranquilla esistenza che la mia arte ne soffre. Non potrei disegnare nulla ora, neppure un segno
-                        potrei tracciare; eppure mai sono stato così gran pittore come in questo momento. Quando l'amata
-                        valle intorno a me si avvolge nei suoi vapori, e l'alto sole posa sulla mia foresta
-                        impenetrabilmente oscura, e solo alcuni raggi si spingono nell'interno sacrario, io mi stendo
-                        nell'erba alta presso il ruscello che scorre, e più vicino alla terra osservo mille multiformi
-                        erbette; allora sento più vicino al mio cuore brulicare tra gli steli il piccolo mondo degli
-                        innumerevoli, infiniti vermiciattoli e moscerini, e sento la presenza dell'Onnipossente che ci
-                        ha
-                        creati a sua immagine e ci tiene in una eterna gioia. Amico mio, quando dinanzi ai miei occhi si
-                        stende il crepuscolo e posa intorno a me il mondo e il cielo tutto nell'anima mia come la
-                        sembianza
-                        di donna amata, allora spesso sono preso da un angoscioso desiderio e penso: Ah, potessi tu
-                        esprimere tutto questo, trasfonderlo sulla carta così pieno e caldo come vive in te, e fosse
-                        questo
-                        lo specchio della tua anima, come la tua anima è lo specchio del Dio infinito. Ma mi sprofondo
-                        in un
-                        abisso e m'inchino alla potenza dello splendore di questa visione.La mia anima è pervasa da una
-                        mirabile serenità, simile a queste belle mattinate di maggio che io godo con tutto il cuore.</p>
-
-                    <h2>Articoli interessanti</h2>
-
+                        </div>
+                        <article class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                            </p>
+                        </article>
+                    </div>
 
                 </section>
-
-
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -140,6 +111,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!--End Modal-->
+
                 <div class="commentSection" style="display: none;">
                     <div class="form-group">
                         <h3>Commenta l'articolo: </h3>
@@ -165,6 +139,9 @@
 
     <!-- Footer -->
     <footer>
+        <h6>About</h6>
+        <p>Questo è un blog usato per esercitarci nel corso di Full stack developer, con lo scopo di esercitarci con
+            varie tecnologie</p>
         <!-- Copyright -->
         <div class="card-footer">© 2020 Copyright:
             <a href="https://giorgioloi.com/"> giorgioloi.com</a>
@@ -183,6 +160,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="app/models/Article.js"></script>
+    <script type="text/javascript" src="app/services/restController.js"></script>
     <script type="text/javascript" src="app/controllers/index.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
