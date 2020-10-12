@@ -17,7 +17,8 @@ class RestController {
             url: url,
             data: JSON.stringify(data),
             dataType: 'json',
-            success: onSuccess
+            success: onSuccess,
+            contentType: "application/json"
         });
 
 

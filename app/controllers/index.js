@@ -52,7 +52,7 @@ class ArticleController {
                     this.modalFeaturedCheck.is(':checked'),
                     this.tag
                 );
-                //this.addUIPost(Ar);
+                this.addUIPost(Ar);
                 this.postArticles(Ar);
                 this.closeModal();
             }.bind(this));
@@ -85,12 +85,12 @@ class ArticleController {
 
     }
 
-    showArticle(postArticle) {
-        let uiTitle = `<h4>${postArticle.title}</h4>`;
-        let uiBody = `<p class="article">${postArticle.body}<br>#${postArticle.tag}</p>`;
-        //commentSection = $(".commentSection").html();
-        sectionContainer.append(uiTitle, uiBody);
-    }
+    // showArticle(postArticle) {
+    //     let uiTitle = `<h4>${postArticle.title}</h4>`;
+    //     let uiBody = `<p class="article">${postArticle.body}<br>#${postArticle.tag}</p>`;
+    //     //commentSection = $(".commentSection").html();
+    //     sectionContainer.append(uiTitle, uiBody);
+    // }
 
     closeModal() {
         $("#myModal").modal("hide");
@@ -98,7 +98,7 @@ class ArticleController {
 
 
     getArticles() {
-        this.restController.get("https://texty-89895.firebaseio.com/posts.json", function (data, status, xhr) {
+        this.restController.get("http://localhost:3000/articles", function (data, status, xhr) {
             let jsonPost = [];
             for (var i in data) {
                 var post = data[i];
@@ -118,20 +118,19 @@ class ArticleController {
 
 
     postArticles(data) {
-        // post(url, data, onSuccess, onError) {
-        this.restController.post("https://texty-89895.firebaseio.com/posts.json", data, function () {
-
+        this.restController.post("http://localhost:3000/articles", data, function () {
+            console.log(data);
         }.bind(this))
     }
 
     deleteArticle() {
-        this.restController.delete(`https://texty-89895.firebaseio.com/posts/` + `-MJ7lGD4Sr2e1IIYzQ7n` + `.json`, function () {
+        this.restController.delete(`http://localhost:3000/articles/` + `-MJ7lGD4Sr2e1IIYzQ7n` + `.json`, function () {
 
         }.bind(this))
     }
 
     putArticles(data) {
-        this.restController.put("https://texty-89895.firebaseio.com/posts.json", data, function () {
+        this.restController.put("http://localhost:3000/articles", data, function () {
 
         }.bind(this))
     }
