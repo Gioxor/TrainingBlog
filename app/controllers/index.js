@@ -32,17 +32,6 @@ class ArticleController {
             this.tag = ["tag1", "tag2"];
 
 
-            //$("#liked").hide();
-            // $("#comment").click(function () {
-
-            //     var nickText = $("#formGroupExampleInput").val();
-            //     var commentText = $("#formGroupExampleInput2").val();
-
-            //     var comment = '<li class="list-group-item">' + '<a href="#" class="badge badge-secondary">' + nickText + '</a>' + '</br>' + commentText + '</li>';
-            //     commentContainer.append(comment);
-            //     $("input").val("");
-            // });
-
             //Article insert
             $("#insertButton").click(function () {
 
@@ -61,12 +50,24 @@ class ArticleController {
                 this.addUIPost(articles[i]);
             }
             this.getArticles();
+            //if (alert) this.showAlert();
             //this.deleteArticle();
-
 
         }.bind(this));
 
     }
+
+    showAlert() {
+        var alertContainer = $("#alertContainer")
+        alertContainer.css("display", "block");
+    }
+
+    showAlertError() {
+        var alertContainerError = $("#alertContainerError")
+        alertContainerError.css("display", "block");
+    }
+
+
 
 
     addUIPost(postArticle) {
@@ -85,12 +86,7 @@ class ArticleController {
 
     }
 
-    // showArticle(postArticle) {
-    //     let uiTitle = `<h4>${postArticle.title}</h4>`;
-    //     let uiBody = `<p class="article">${postArticle.body}<br>#${postArticle.tag}</p>`;
-    //     //commentSection = $(".commentSection").html();
-    //     sectionContainer.append(uiTitle, uiBody);
-    // }
+
 
     closeModal() {
         $("#myModal").modal("hide");
@@ -113,18 +109,23 @@ class ArticleController {
             for (let j in jsonPost) {
                 this.addUIPost(jsonPost[j]);
             }
-        }.bind(this))
+        }.bind(this), function () {
+            this.showAlertError();
+        }.bind(this));
     }
 
 
     postArticles(data) {
-        this.restController.post("http://localhost:3000/articles", data, function () {
-            console.log(data);
-        }.bind(this))
+        this.restController.post("http://localhost:3000/articl", data, function () {
+            this.showAlert();
+
+        }.bind(this), function () {
+            this.showAlertError();
+        }.bind(this));
     }
 
-    deleteArticle() {
-        this.restController.delete(`http://localhost:3000/articles/` + `-MJ7lGD4Sr2e1IIYzQ7n` + `.json`, function () {
+    deleteArticle(articleId) {
+        this.restController.delete(`http://localhost:3000/articles/` + articleId + `.json`, function () {
 
         }.bind(this))
     }

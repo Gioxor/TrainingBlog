@@ -1,11 +1,11 @@
 header {
     background-color: #273238;
+
 }
 
 body {
     background-color: #d8e3ea;
 }
-
 
 .navbar {
     background-color: #273238;
@@ -18,17 +18,6 @@ body {
 .card-header {
     background-color: #007cba;
     color: lightyellow;
-}
-
-.carousel-inner img {
-    display: block;
-    margin: 0px auto;
-    text-align: center;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: gainsboro;
 }
 
 .completed {

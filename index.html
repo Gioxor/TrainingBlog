@@ -48,6 +48,21 @@
         <div class="row" id="postsRow">
             <div class="col-12">
                 <h2>Articoli interessanti</h2>
+
+                <!--Alert Zone -->
+                <div class="alert alert-success alert-dismissible" id="alertContainer" role="alert"
+                    style="display: none;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <h4 class="alert-heading">Well done!</h4>
+                    <p>Article Insert Successfully.</p>
+                </div>
+                <div class="alert alert-danger alert-dismissible" role="alert" id="alertContainerError"
+                    style="display: none;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <h4 class=" alert-heading">Ops!</h4>
+                    <p>Errore interno</p>
+                </div>
+                <!--  End Alert Zone -->
                 <section id="postContainer" class="col-12 col-sm-6 px-2 my-1" style="display: none;">
 
                     <div class="card h-100">
@@ -136,17 +151,16 @@
         </div>
     </div>
 
-
     <!-- Footer -->
-    <footer>
-        <h6>About</h6>
-        <p>Questo è un blog usato per esercitarci nel corso di Full stack developer, con lo scopo di esercitarci con
-            varie tecnologie</p>
-        <!-- Copyright -->
-        <div class="card-footer">© 2020 Copyright:
-            <a href="https://giorgioloi.com/"> giorgioloi.com</a>
-        </div>
-        <!-- Copyright -->
+    <footer class="px-4">
+        <h6\>About</h6>
+            <p>Questo è un blog usato per esercitarci nel corso di Full stack developer, con lo scopo di esercitarci con
+                varie tecnologie</p>
+            <!-- Copyright -->
+            <div class="card-footer">© 2020 Copyright:
+                <a href="https://giorgioloi.com/"> giorgioloi.com</a>
+            </div>
+            <!-- Copyright -->
     </footer>
 
     <!-- Optional JavaScript -->
