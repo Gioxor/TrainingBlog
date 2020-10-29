@@ -67,9 +67,6 @@ class ArticleController {
         alertContainerError.css("display", "block");
     }
 
-
-
-
     addUIPost(postArticle) {
         //aggiungere un articolo\
         var postContainer = $("#postContainer").clone();
@@ -86,12 +83,9 @@ class ArticleController {
 
     }
 
-
-
     closeModal() {
         $("#myModal").modal("hide");
     }
-
 
     getArticles() {
         this.restController.get("http://localhost:3000/articles", function (data, status, xhr) {
@@ -114,9 +108,8 @@ class ArticleController {
         }.bind(this));
     }
 
-
     postArticles(data) {
-        this.restController.post("http://localhost:3000/articl", data, function () {
+        this.restController.post("http://localhost:3000/articles", data, function () {
             this.showAlert();
 
         }.bind(this), function () {
